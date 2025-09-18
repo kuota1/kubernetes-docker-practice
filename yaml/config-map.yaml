@@ -1,0 +1,7 @@
+appiVersion: v1
+kind: ConfigMap
+metadada:
+  name: app-config
+data:
+  APP-COLOR: blue
+  APP-MODEL: prod

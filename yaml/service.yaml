@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: myapp-service
+spec:
+  type: NodePort #aqui pones el tipo NodePort Load Balancer o ClusterIP
+  ports:
+    - port: 80
+      targetPort: 80
+      prot: 80
+      nodePort: 30008
+  selector: #esto se saca del pod-definition.yaml de los labels
+    app: myapp
+    type: front-end

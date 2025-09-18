@@ -1,0 +1,9 @@
+apiVersion: scheduling.k8s.io/v1
+kind: PriorityClass
+metadata:
+  name: high-priority
+value: 1000000000
+description: "Priority class for mission critical pods"
+preemptionPolicy:   PreemptLowerPriority #si quieres que elimine tareas para asignar el espacio de lo contratio usa "never"
+#globalDefault: true si quieres hacerla global
+  

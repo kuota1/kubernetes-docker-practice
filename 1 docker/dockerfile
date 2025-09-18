@@ -1,0 +1,16 @@
+#usar imagen oficial de python
+
+FROM python:3.10-slim
+
+#establecer el directorio de trabajo
+WORKDIR /app
+
+#copiar los archivos al contenedor
+COPY . .
+
+#instalar las dependencias
+RUN pip install --no-cache-dir -r requirements.txt
+
+#comando para ejecutar la aplicacion
+CMD ["python", "app.py"]
+
